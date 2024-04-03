@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>National Ticket Booking Spot - Booking Page</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #082f49;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        padding: 20px;
+        width: 80%;
+    }
+
+    h1 {
+        color: #0891b2;
+        font-size: 28px;
+    }
+
+    .form-table {
+        border: 2px solid #0891b2;
+        text-align: left;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .form-table input[type="number"],
+    .form-table input[type="date"],
+    .form-table select,
+    .form-table input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #0891b2;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .form-table input[type="number"]:focus,
+    .form-table input[type="date"]:focus,
+    .form-table select:focus,
+    .form-table input[type="number"]:hover,
+    .form-table input[type="date"]:hover,
+    .form-table select:hover,
+    .form-table input[type="submit"]:focus,
+    .form-table input[type="submit"]:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(8, 145, 178, 0.5);
+    }
+
+    .form-table select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><polygon points='0,0 12,0 6,8'/></svg>");
+        background-size: 12px 8px;
+        background-repeat: no-repeat;
+        background-position: right 10px top 50%;
+        padding-right: 20px;
+    }
+
+    .form-table input[type="submit"] {
+        background-color: #008000; /* Change the button color here */
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .form-table input[type="submit"]:hover {
+        background-color: #006400; /* Change the button hover color here */
+        transform: translateY(-5px) scale(1.05); /* Apply both the floating and scaling effect */
+        box-shadow: 0 0 10px rgba(8, 145, 178, 0.5);
+    }
+
+    footer {
+        margin-top: 25%;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>National Ticket Booking Spot - Booking Page</h1>
+        <form action="booking.php" method="post">
+            <table class="form-table">
+                <tr>
+                    <td>Number of Tickets:</td>
+                    <td><input type="number" name="numtickets" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Visit:</td> <!-- Changed the name here -->
+                    <td><input type="date" name="dateofvisit" required></td> <!-- Changed the name here -->
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <select name="city" required>
+                            <option value="" disabled selected>Select a city</option>
+                            <option value="New York">New York</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Houston">Houston</option>
+                            <!-- Add more city options as needed -->
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <input type="submit" value="BOOK TICKETS" name="ticket">
+        </form>
+    </div>
+</body>
+</html>

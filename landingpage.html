@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+    <style>
+        /* Moved CSS inside the head for better organization */
+        .info {
+            background-color: black;
+            width: 100.8%;
+            font-size: 25px;
+            margin: 2px auto;
+            /* Removed 'top' property as it's not applicable */
+            /* Removed duplicate 'font-size' property */
+            /* Added padding to the list for better spacing */
+            padding: 10px;
+            /* Added display flex to align items in one line */
+            display: flex;
+            justify-content: space-around; /* Adjust alignment as needed */
+            flex-wrap: nowrap; /* Prevent items from wrapping onto multiple lines */
+            overflow-x: auto; /* Add horizontal scrollbar if content overflows */
+        }
+        /* Styled anchor tags within the list */
+        .info ul li a {
+            color: antiquewhite;
+            text-decoration: none; /* Remove underlines from links */
+        }
+        /* Styled hover effect for anchor tags */
+        .info ul li a:hover {
+            color: lightgray;
+        }
+        .info li {
+            display: inline-block;
+
+            
+        }
+        .info li a{
+            padding-right: 140px;
+        }
+        .slideshow-container {
+            height: 100vh; /* Set container height to 100% viewport height */
+            position: relative;
+            width: 100vw; /* Set container width to 100% viewport width */
+            margin: 0 auto; /* Center the container horizontally */
+            overflow: hidden; /* Ensure images don't overflow */
+            position: relative;
+
+        }
+
+        .slide {
+            display: flex;
+            justify-content: center; /* Center the image horizontally */
+            align-items: center; /* Center the image vertically */
+            width: 200vw; /* Set image width to 100% viewport width */
+            height: 100vh; /* Set image height to 100% viewport height */
+            object-fit: cover; /* Ensure the image covers the entire container */
+            margin: 0 auto; /* Remove any margin */
+            padding: 0; /* Remove any padding */
+        }
+
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 2}
+        }
+        /* .demand{
+            text-align: center;
+        } */
+        .most1{
+            width: 50%;
+        }
+        .images {
+            display: flex; /* Use flexbox to arrange images in a row */
+        }
+
+.images > div {
+    flex: 1; /* Each image container takes up equal space */
+    text-align: center; /* Center the image horizontally */
+    margin: 10px; /* Add margin for spacing between images */
+}
+
+.images img {
+    max-width: 80%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+}
+.most1 {
+    flex: 1; /* Each image container takes up equal space */
+    text-align: center; /* Center the image horizontally */
+    margin: 10px; /* Add margin for spacing between images */
+    width: 33.33%; /* Adjust width to occupy one-third of the container */
+}
+.text-block {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  /* background-color: black; */
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.text-block {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  left: 0;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size:110% ;
+  font-family: "Yatra One", system-ui;
+}
+
+.text-block p {
+  font-family: "Caveat", cursive;
+  font-size: 100%;
+}
+.images p{
+    font-family: "Cookie", cursive;
+    font-size: 90%;
+}
+.contact{
+    background-color: black;
+    color: antiquewhite;
+    font-size:110% ;
+    font-family: "Yatra One", system-ui;
+}
+.contact p{
+    font-family: "Caveat", cursive;
+    font-size: 100%;
+    font-weight:normal;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: antiquewhite;
+    padding: 2px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="info">
+            <img src="logo.jpg" alt="Logo" width="110px" height="110px">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="slideshow-container">
+            <div class="slide fade">
+              <img src="https://storage.googleapis.com/gen-atmedia/3/2016/01/5cce31c3c20f0f4fa192572d652107f0f6404ffe.jpeg" width="50%" height="70%" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+              <img src="https://t4.ftcdn.net/jpg/01/02/58/91/360_F_102589163_hk02O92vzEYP0rZbVyvDTbkje1GaUDk1.jpg" width="50%" height="70%" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+              <img src="https://lh3.googleusercontent.com/p/AF1QipPrtKLucURXUIa_NzXWaPIwnXmAthWo6Ph0A8MC=w1080-h608-p-no-v0" width="50%" height="70%" alt="Slide 3">
+            </div>
+            <div class="slide fade">
+                <img src="https://t3.ftcdn.net/jpg/02/22/41/82/360_F_222418209_hfwPSMzDi7pZWmCTn9NGdCJ3sijCGuQo.jpg" width="50%" height="70%" alt="Slide 4">
+            </div>
+            <div class="text-block">
+                <h2>MOST DEMANDING</h2>
+            
+            <P>"Experience a culinary adventure with our vibrant spices: ignite your taste buds with fiery chili powder, embrace wellness with golden turmeric, and elevate your dishes with the aromatic charm of garam masala. Join us in savoring the essence of flavor-buy now and spice up your kitchen!" 
+            </P>
+        </div>
+        </div>
+        <!-- <div class="demand">
+            <h1>most demanding</h1>
+        </div> -->
+        <div class="images">
+            <div class="most1">
+                <div class="image-overlay">
+                    <p>Chili Powder</p>
+                    <img src="chilli3.webp" alt="chilli.jpg">
+                </div>
+            </div>
+            <div class="most2">
+                <div class="image-overlay">
+                    <p>Turmeric Powder</p>
+                    <img src="turmeric.webp" alt="turmeric.webp">
+                </div>
+            </div>
+            <div class="most3">
+                <div class="image-overlay">
+                    <p>Garam Masala</p>
+                    <img src="Garam_masala_powder_1.webp" alt="Garam_masala_powder_1.webp">
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="contact">
+        <h1>Contact Us</h1></br>
+        <p>"Efficiency and convenience are at the heart of our service. Need assistance or have a question? Reach out to us via phone. We're here to help make your grocery shopping experience seamless and enjoyable."
+        </p></br>
+        <div class="details">
+            
+            <li>Name of Shop: Vishwakarma Provision</li>
+            <li>Name of Owner: Manohar V.Surate</li>
+            <li>Contact no.: 94******50</li>
+            <li>Email: Vishwakarmaprovision@gmail.com</li>
+            <li>Address: Khadpura chauk,Tilak ward,Umarkhed</li>
+            
+        </div>
+    </div>
+    <br>
+        <footer>copyright@ms</footer>
+            
+        
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>
+
